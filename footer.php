@@ -5,9 +5,7 @@
 					<div class="row">						
 						<div class="col-lg-12">
 							<div class="footer-widget">
-								<h2 class="footer-widget-title">
-									Tags
-								</h2>
+								<h2 class="footer-widget-title">Tags</h2>
 								<ul class="list-inline">
 									<?php
 										$tags = get_tags('');
@@ -28,7 +26,7 @@
 						<div class="col-md">
 							<div class="footer-logo-container">
 								<a href="/">
-									<img src="<?php echo BARREL_DIR_URI .'/assets/images/Barrel-White-Logo.png'; ?>" alt="footer logo" class="footer-logo" height="250" width="200">
+									<img src="<?php echo BARREL_DIR_URI .'/assets/images/Barrel-White-Logo.png'; ?>" alt="footer logo" class="footer-logo" height="75" width="160">
 								</a>
 							</div>
 							<!-- End of .brand-logo-container -->

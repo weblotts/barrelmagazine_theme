@@ -86,7 +86,8 @@ get_header(); ?>
                                             <p class="mid"><?php echo wp_trim_words(get_the_excerpt(), 25); ?></p>
                                             <div class="post-metas">
                                                 <ul class="list-inline">
-                                                    <li>By <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author();?></a></li>
+                                                    <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author();?></a></li>.
+                                                    <li><a href=""><?php the_date();?></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -98,7 +99,6 @@ get_header(); ?>
                                 endwhile;
                                 wp_reset_postdata();
                             endif; ?>
-                        
                     </main>
                     <!-- End of .axil-content -->
                 </div>

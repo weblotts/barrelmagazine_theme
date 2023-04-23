@@ -49,6 +49,7 @@
                                     <!-- End of .post-title-wrapper -->
                                 </div>
                                 <!-- End of .col-lg-8 -->
+                                
                             </div>
                         </div>
                         <!-- End of .container -->

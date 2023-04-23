@@ -81,12 +81,12 @@ get_header(); ?>
                     <article class="post-details">
                         <div class="single-blog-wrapper">
                             <div class="post-details__social-share mt-2">
-                                <ul class="social-share social-share__with-bg social-share__vertical">
+                                <!-- <ul class="social-share social-share__with-bg social-share__vertical">
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fab fa-behance"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
+                                </ul> -->
                                 <!-- End of .social-share__no-bg -->
                             </div>
                             <!-- End of .social-share -->
@@ -100,12 +100,12 @@ get_header(); ?>
                     <!-- End of .post-details -->
 
                     <div class="post-shares m-t-xs-60">
-                        <div class="title">SHARE:</div>
+                        <!-- <div class="title">SHARE:</div>
                         <ul class="social-share social-share__rectangular">
                             <li><a href="#" class="btn bg-color-facebook"><i class="fab fa-facebook-f"></i>1K+</a></li>
                             <li><a href="#" class="btn bg-color-twitter"><i class="fab fa-twitter"></i>1000+</a></li>
                             <li><a href="#" class="btn bg-color-linkedin"><i class="fab fa-linkedin-in"></i>1M+</a> </li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <!-- End of .post-shares -->
 
@@ -122,12 +122,12 @@ get_header(); ?>
 
                                 <div class="media-body-content">
                                     <p><?php the_author_description();?></p>
-                                    <ul class="social-share social-share__with-bg">
+                                    <!-- <ul class="social-share social-share__with-bg">
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fab fa-behance"></i></a></li>
                                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    </ul>
+                                    </ul> -->
                                     <!-- End of .social-share__no-bg -->
                                 </div>
                                 <!-- End of .media-body-content -->
@@ -142,6 +142,8 @@ get_header(); ?>
                         
                     </div>
                     <!-- End of .post-navigation -->
+                
+                
 
                 </main>
                 <!-- End of main -->
@@ -181,13 +183,80 @@ get_header(); ?>
         <!-- End of .row -->
     </div>
     <!-- End of .container -->
-</div>
-<!-- End of .post-single-wrapper -->
 
 
+            <section class="related-post p-b-xs-30">
+                <div class="container">            
+                    <!-- End of .section-title -->
+                    <div class="grid-wrapper">
+                        <div class="row">                
+                        <?php 
+                            // retrieve all the tag's ids associated with the current post
+                            $tags = wp_get_post_terms($post->ID, 'post_tag', ['fields' => 'ids']);
+                            if($tags):
+                                $args = [
+                                    'post_type' => ['post'],
+                                    // do not display the current post
+                                    'post_not_in' => get_the_ID(),
+                                    // Number of posts to display
+                                    'posts_per_page' => 4,
+                                    // no sticky posts will be here
+                                    'ignore_sticky_posts' => 1,
+                                    'order' => 'DESC',
+                                    // focus on these lines
+                                    'tax_query' => [
+                                        [
+                                            'taxonomy' => 'post_tag',
+                                            'terms' => $tags
+                                        ]
+                                    ]
+                                ];
+                            
+                                $my_query = new WP_Query($args);
+                                if($my_query->have_posts()): ?>
+                                    <div class="section-title m-b-xs-40">
+                                        <h2 class="axil-title">Related</h2>
+                                    </div>
+                                <?php 
+                                    while($my_query->have_posts()): $my_query->the_post();
+                                    $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
+                                ?>
 
+                                <div class="block col-lg-3 mb-0 col-md-4 p-1">
+                                    <div class="content-block m-b-lg-1 m-b-xs-30">
+                                        <a href="<?php the_permalink();?>">
+                                            <img class="p--img" src="<?php echo $backgroundImg[0]; ?>" alt="abstruct image"
+                                                class="img-fluid h-100">
+                                            <div class="grad-overlay"></div>
+                                        </a>
+                                        <div class="media-caption">
+                                            <div class="caption-content">
+                                                <h5 class="axil-post-title hover-line "><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h5>
+                                                <div class="caption-meta">
+                                                    <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author();?></a>
+                                                </div>
+                                            </div>
+                                            <!-- End of .content-inner -->
+                                        </div>
+                                    </div>
+                                    <!-- End of .content-block -->
+                                </div>
+                                <!-- End of .col-lg-3 -->
+                            <?php endwhile; 
+                                endif;
+                            endif; ?>
 
+                        </div>
+                        <!-- End of .row -->
+                    </div>
+                    <!-- End of .grid-wrapper -->
+                </div>
+                <!-- End of .container -->
+            </section>
+            <!-- End of .related-post -->
 
+        </div>
+        <!-- End of .post-single-wrapper -->
 
     <?php 
         endwhile;

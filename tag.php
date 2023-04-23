@@ -38,8 +38,8 @@ get_header(); ?>
                                     <?php 
                                         $cat_id = get_queried_object_id(); 
                                         $category = get_tag($cat_id);
-                                        $count = $category->category_count;
-                                        ?>
+                                        $count = $category->count;
+                                    ?>
                                     Total Posts (<?php echo $count; ?>)
                                 </li>
                             </ul>

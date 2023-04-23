@@ -66,7 +66,8 @@
 							$recent_posts = wp_get_recent_posts(
 								[
 									'numberposts' => 4, // Number of recent posts thumbnails to display
-									'post_status' => 'publish' // Show only the published posts
+									'post_status' => 'publish', // Show only the published posts
+									'post__not_in' => get_option( 'sticky_posts' )
 								]
 							);
 							foreach( $recent_posts as $post_item ) : ?>

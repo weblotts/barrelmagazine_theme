@@ -14,6 +14,7 @@
                         'post_status' => 'publish',
                         'posts_per_page' => 3,
                         'category_name' => 'flagship-projects',
+                        'post__not_in' => get_option( 'sticky_posts' )
                     );
                     $arr_posts = new WP_Query( $args );                              
                     if ( $arr_posts->have_posts() ) :                              

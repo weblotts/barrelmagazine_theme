@@ -4,6 +4,7 @@
         'post_status' => 'publish',
         'posts_per_page' => 1,
         'tag' => 'top',
+        'post__not_in' => get_option( 'sticky_posts' )
     );
     $arr_posts = new WP_Query( $args );                              
     if ( $arr_posts->have_posts() ) :

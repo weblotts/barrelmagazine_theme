@@ -30,7 +30,15 @@ function barrel_get_breadcrumb() {
                 echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
                 the_title();
             }
-    } elseif (is_page()) {
+    } elseif(is_tag()){
+        echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+        the_tags('  ');
+        if (is_single()) {
+            echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+            the_title();
+        }
+    }
+    elseif (is_page()) {
         echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
         echo the_title();
     } elseif (is_search()) {
@@ -40,5 +48,3 @@ function barrel_get_breadcrumb() {
         echo '</em>"';
     }
 }
-
-

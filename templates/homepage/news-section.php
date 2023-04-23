@@ -12,7 +12,8 @@
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'category_name' => 'news',
-                'posts_per_page' => 3   
+                'posts_per_page' => 3,
+                'post__not_in' => get_option( 'sticky_posts' )  
             );
             $arr_posts = new WP_Query( $args );                              
             if ( $arr_posts->have_posts() ) :
