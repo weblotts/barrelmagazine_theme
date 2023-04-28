@@ -26,7 +26,7 @@
 						<div class="col-md">
 							<div class="footer-logo-container">
 								<a href="/">
-									<img src="<?php echo BARREL_DIR_URI .'/assets/images/Barrel-White-Logo.png'; ?>" alt="footer logo" class="footer-logo" height="75" width="160">
+									<img src="<?php echo BARREL_DIR_URI .'/assets/images/Barrel-White-Logo.png'; ?>" alt="footer logo" class="footer-logo" height="75" width="200">
 								</a>
 							</div>
 							<!-- End of .brand-logo-container -->

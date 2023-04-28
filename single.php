@@ -49,8 +49,9 @@ get_header(); ?>
                         </h2>
                         <div class="post-metas banner-post-metas m-t-xs-30">
                             <ul class="list-inline">
-                                <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>" class="post-author post-author-with-img"><?php the_author();?></a></li>
-                                <li><i class="dot">.</i><?php the_date(  );?></li>
+                                <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>" class="post-author post-author-with-img"><i class="fa fa-user" aria-hidden="true"></i><?php the_author();?></a></li>
+                                <li><i class="dot">.</i> <i class="fa fa-calendar" aria-hidden="true"></i><?php the_date(  );?></li>
+                                <li><i class="dot">.</i> <i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
                             </ul>
                         </div>
                         <!-- End of .post-metas -->
@@ -113,7 +114,6 @@ get_header(); ?>
 
                     <div class="about-author m-b-xs-60">
                         <div class="media">
-                            <a href="#"><img class="author-img" src="<?php echo get_avatar( '', 32 ); ?>"   alt=""></a>
                             <div class="media-body">
                                 <div class="media-body-title">
                                     <h3><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author();?></a></h3>
@@ -152,7 +152,8 @@ get_header(); ?>
 
             <div class="col-lg-4">
                 <aside class="post-sidebar">
-                    
+                    <!-- adblock -->
+                    <?php get_template_part( 'templates/sidebars/sidebar-upper-add' ); ?>
                     <!-- Latest Posts -->
                     <?php get_template_part( 'templates/sidebars/latest' ); ?>
 

@@ -23,7 +23,7 @@
                             $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
                         ?>
                 
-                            <div class="block col-lg-4 mb-0 col-md-4 p-1">
+                            <div class="block col-lg-4 mb-0 col-md-4 p-lg-1  ">
                                 <div class="content-block m-b-lg-1 m-b-xs-30">
                                     <a href="<?php the_permalink();?>">
                                         <img class="p--img" src="<?php echo $backgroundImg[0]; ?>" alt="abstruct image"

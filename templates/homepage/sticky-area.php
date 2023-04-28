@@ -34,8 +34,12 @@
 										<a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ) ?>"class="post-cat cat-btn bg-color-red-two"><?php echo esc_html( $categories[0]->name );?></a>
 								<?php }?>
 							</div>
-							<h3 class="axil-post-title hover-line hover-line"><a
-									href="<?= the_permalink ()?>"><?= the_title();?></a></h3>
+							<h3 class="axil-post-title hover-line hover-line"><a href="<?= the_permalink ()?>"><?= the_title();?></a></h3>
+							<div class="post-metas">
+								<ul class="list-inline">
+									<li><i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
+								</ul>
+							</div>
 						</div>
 						<!-- End of .content-inner -->
 					</div>
@@ -51,7 +55,7 @@
 			</div>
 			
 			<!-- End of .col-lg-6 -->
-			<div class="col-lg-6 p-0">
+			<div class="col-lg-6">
 				
 				<div class="axil-recent-news">
 					

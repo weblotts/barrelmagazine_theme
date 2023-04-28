@@ -86,7 +86,9 @@ get_header(); ?>
                                             <p class="mid"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
                                             <div class="post-metas">
                                                 <ul class="list-inline">
-                                                    <li>By <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author();?></a></li>
+                                                    <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>" class="post-author post-author-with-img"><i class="fa fa-user" aria-hidden="true"></i><?php the_author();?></a></li>
+                                                    <li><i class="dot">.</i> <i class="fa fa-calendar" aria-hidden="true"></i><?php the_date(  );?></li>
+                                                    <li><i class="dot">.</i> <i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -96,8 +98,11 @@ get_header(); ?>
 
                             <?php
                                 endwhile;
-                                wp_reset_postdata();
-                            endif; ?>
+                                wp_reset_postdata(); ?>
+                            <div>
+                                <p>No stories in the '<strong><?php single_tag_title(); ?></strong>' tag yet. Please check again with us next time</p>
+                            </div>
+                            <?php endif; ?>
                         
                     </main>
                     <!-- End of .axil-content -->

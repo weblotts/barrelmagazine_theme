@@ -12,6 +12,9 @@ get_header(); ?>
 <div class="main-content">
 
     <!-- slider Area -->
+    <?php get_template_part( 'templates/homepage/top-section' ); ?>
+
+    <!-- slider Area -->
     <?php get_template_part( 'templates/homepage/slider-section-one' ); ?>
 	
 

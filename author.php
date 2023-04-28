@@ -17,7 +17,7 @@
     <div class="breadcrumb-wrapper">
         <div class="container">
             <nav aria-label="breadcrumb">
-                <?php //barrel_get_breadcrumb(); ?>
+                <?php barrel_get_breadcrumb(); ?>
             </nav>
         </div>
         <!-- End of .container -->
@@ -37,7 +37,10 @@
                         <div class="post-metas">
                             <ul class="list-inline">
                                 <li>
-                                    
+                                    <?php
+                                        $cat_id = get_queried_object_id();                                   
+                                    ?>
+                                    Total Posts (<?php echo  count_user_posts( $cat_id ); ?>)
                                 </li>
                             </ul>
                         </div>
@@ -86,7 +89,8 @@
                             <p class="mid"><?php echo wp_trim_words(get_the_excerpt(), 10); ?></p>
                             <div class="post-metas">
                                 <ul class="list-inline">
-                                    <li>By <a href=""><?php the_author();?></a></li>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php the_date(  );?></li>
+                                    <li><i class="dot">.</i> <i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
                                 </ul>
                             </div>
                         </div>
@@ -96,7 +100,11 @@
 
 
 
-                    <?php endwhile; wp_reset_postdata(); endif; ?>  
+                    <?php endwhile; wp_reset_postdata(); ?>
+                            <div>
+                                <p>Author hasn't written a story yet. Please check again with us next time</p>
+                            </div>
+                    <?php endif; ?>
                         
                         
                     </main>
@@ -105,7 +113,10 @@
                 <!-- End of .col-lg-8 -->
 
                 <div class="col-lg-4">
-                    
+                     <aside class="post-sidebar">                        
+                        <!-- Latest Posts -->
+                        <?php get_template_part( 'templates/sidebars/latest' ); ?>
+                    </aside>
                 </div>
                 <!-- End of .col-lg-4 -->
             </div>

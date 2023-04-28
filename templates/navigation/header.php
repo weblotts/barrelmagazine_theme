@@ -13,9 +13,10 @@
 
 <div class="side-nav">
 	<div class="side-nav-inner nicescroll-container">
-		<form action="#" class="side-nav-search-form">
+		<form action="/" class="side-nav-search-form" method="get">
 			<div class="form-group search-field">
-				<input type="text" class="search-field" name="search-field" placeholder="Search...">
+				<!-- <input type="text" class="search-field" name="s" id="s" placeholder="Search..."> -->
+				<input type="text" class="navbar-search-field" name="s" id="s" onkeyup="fetch()" placeholder="Search Here...">
 				<button class="side-nav-search-btn"><i class="fas fa-search"></i></button>
 			</div>
 			<!-- End of .side-nav-search-form -->
@@ -186,14 +187,14 @@
 				<div class="navbar-extra-features ml-auto">
 					
 					
-					<!-- <form action="/" method="get" class="navbar-search">
+					<form action="/" method="get" class="navbar-search">
 						<div class="search-field">
-							<input type="text" class="navbar-search-field" id="keyword" onkeyup="fetch()" placeholder="Search Here...">
+							<input type="text" class="navbar-search-field" name="s" id="s" onkeyup="fetch()" placeholder="Search Here...">
 							<button class="navbar-search-btn" type="button"><i class="fal fa-search"></i></button>
-						</div> -->
+						</div>
 						<!-- End of .search-field -->
-						<!-- <a href="#" class="navbar-search-close"><i class="fal fa-times"></i></a>
-					</form> -->
+						<a href="#" class="navbar-search-close"><i class="fal fa-times"></i></a>
+					</form>
 					<!-- End of .navbar-search -->
 
 					

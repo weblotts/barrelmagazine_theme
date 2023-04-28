@@ -23,7 +23,7 @@
                         $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
                     ?>
 
-                <div class="col-lg-6 p-0">
+                <div class="col-lg-6">
                     <div class="media post-block m-b-xs-30">
                         <a href="post-format-standard.html" class="align-self-center"><img class=" m-r-xs-30"
                                 src="<?php echo $backgroundImg[0]; ?>" alt=""></a>
@@ -32,7 +32,7 @@
                                     href="<?= the_permalink( );?>"><?= the_title()?></a></h3>
                             <div class="post-metas">
                                 <ul class="list-inline">
-                                    <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author( 'ID' );?></a></li>
+                                    <li><i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
                                 </ul>
                             </div>
                         </div>

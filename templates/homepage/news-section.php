@@ -29,7 +29,7 @@
                         <div class="big">                           
                         
                             <div class="axil-img-container m-b-xs-30">
-                                <a href="post-format-standard.html" class="d-block">
+                                <a href="<?php the_permalink();?>" class="d-block">
                                     <img class="g--img" src="<?php echo $backgroundImg[0]; ?>" alt="gallery images"
                                         class="w-100">
                                     <div class="grad-overlay"></div>
@@ -48,6 +48,7 @@
                                                 <ul class="list-inline">
                                                     <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>" class="post-author"><?php the_author();?></a></li>
                                                     <li><i class="dot">.</i><?= the_date(); ?></li>
+                                                    <li><i class="dot">.</i> <i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -80,6 +81,7 @@
 										<div class="post-metas">
 											<ul class="list-inline">
                                                 <li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>" class="post-author"><?php the_author();?></a></li>
+                                                <li><i class="dot">.</i> <i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
 											</ul>
 										</div>
 									</div>
@@ -88,7 +90,7 @@
 							<!-- End of .post-block -->
 						</div>
 
-                    </div>    
+                    </div>
 
            <?php
                 endif; endwhile;
