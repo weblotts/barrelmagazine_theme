@@ -23,7 +23,8 @@
             [
                 'barrel-header-menu'       => esc_html__('Header Menu', 'barrel'),
                 'barrel-category-menu'       => esc_html__('Category Menu', 'barrel'),
-                'barrel-footer-menu'       => esc_html__('Footer Menu', 'barrel')
+                'barrel-footer-menu'       => esc_html__('Footer Menu', 'barrel'),
+                'barrel-special-menu'       => esc_html__('Special Menu', 'barrel')
             ]
         );
     }

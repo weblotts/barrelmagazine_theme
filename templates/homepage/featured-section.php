@@ -1,5 +1,5 @@
 <!-- End of .top-stories -->
-<section class="section-gap section-gap-top__with-text trending-stories home--trending flagship-section">
+<section class="section-gap section-gap-top__with-text trending-stories home--trending flagship-section1">
     <div class="container">
         <div class="section-title m-b-xs-40">
             <h2 class="axil-title">Featured Stories</h2>
@@ -25,7 +25,7 @@
 
                 <div class="col-lg-6">
                     <div class="media post-block m-b-xs-30">
-                        <a href="post-format-standard.html" class="align-self-center"><img class=" m-r-xs-30"
+                        <a href="<?= the_permalink( );?>" class="align-self-center"><img class=" m-r-xs-30"
                                 src="<?php echo $backgroundImg[0]; ?>" alt=""></a>
                         <div class="media-body ">
                             <h3 class="axil-post-title hover-line hover-line"><a

@@ -35,7 +35,8 @@ get_header(); ?>
                         <div class="post-metas">
                             <ul class="list-inline">
                                 <li>
-                                    <?php 
+                                    <?php
+                                        $category_name = single_cat_title();
                                         $cat_id = get_queried_object_id(); 
                                         $category = get_category($cat_id);
                                         $count = $category->category_count;
@@ -102,18 +103,17 @@ get_header(); ?>
                                 endwhile;
                                 wp_reset_postdata(); ?>
 
-                            <?php else :?>
-
-                            <div>
-                                <p>No stories in the '<strong><?php single_cat_title(); ?></strong>' category yet. Please check again with us next time</p>
-                            </div>
+                               <?php else: ?>
+                                <div>
+                                    <p>No stories in the '<strong><?php single_cat_title(); ?></strong>' yet. Please check again with us next time</p>
+                                </div>
 
                             <?php endif; ?>
                     </main>
                     <!-- End of .axil-content -->
 
 
-                    <?php wpbeginner_numeric_posts_nav(); ?>
+
                 </div>
                 <!-- End of .col-lg-8 -->
 

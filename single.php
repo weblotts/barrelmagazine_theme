@@ -6,7 +6,7 @@ global $post;
 get_header(); ?>
 
 
-	
+
     <div class="breadcrumb-wrapper">
         <div class="container">
             <nav aria-label="breadcrumb">
@@ -16,11 +16,11 @@ get_header(); ?>
         <!-- End of .container -->
     </div>
     <!-- End of .breadcrumb-container -->
-	
+
 
     <?php
     // Start the loop.
-        while ( have_posts() ) : the_post(); 
+        while ( have_posts() ) : the_post();
         $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );
     ?>
     <!-- Banner starts -->
@@ -30,7 +30,7 @@ get_header(); ?>
                 <div class="col-lg-6">
                     <div class="post-title-wrapper">
                         <div class="btn-group">
-                            <?php 
+                            <?php
                                 $categories = get_the_category();
                                 $separator = ' ';
                                 $output = '';
@@ -40,7 +40,7 @@ get_header(); ?>
                                     <?php }
                                     echo trim( $separator );
                             } ?>
-                            
+
                         </div>
 
                         <h2 class="m-t-xs-20 m-b-xs-0 axil-post-title hover-line"><?php the_title();?>
@@ -77,7 +77,7 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                
+
                 <main class="site-main">
                     <article class="post-details">
                         <div class="single-blog-wrapper">
@@ -92,8 +92,10 @@ get_header(); ?>
                             </div>
                             <!-- End of .social-share -->
                             <div class="single-content">
-                                <?php the_content();?>
-                                
+                                <?php the_content(
+                                    
+                                );?>
+
                             </div>
                         </div>
                         <!-- End of .single-blog-wrapper -->
@@ -136,14 +138,14 @@ get_header(); ?>
                     </div>
                     <!-- End of .about-author -->
 
-                    
+
 
                     <div class="post-navigation-wrapper row  m-b-xs-60">
-                        
+
                     </div>
                     <!-- End of .post-navigation -->
-                
-                
+
+
 
                 </main>
                 <!-- End of main -->
@@ -161,7 +163,7 @@ get_header(); ?>
                         <div class="widget-title">
                             <h3>Tags</h3>
                         </div>
-                        
+
                         <div class="axil-content">
                             <ul class="tag-list-wrapper">
                                 <?php
@@ -187,11 +189,11 @@ get_header(); ?>
 
 
             <section class="related-post p-b-xs-30">
-                <div class="container">            
+                <div class="container">
                     <!-- End of .section-title -->
                     <div class="grid-wrapper">
-                        <div class="row">                
-                        <?php 
+                        <div class="row">
+                        <?php
                             // retrieve all the tag's ids associated with the current post
                             $tags = wp_get_post_terms($post->ID, 'post_tag', ['fields' => 'ids']);
                             if($tags):
@@ -212,13 +214,13 @@ get_header(); ?>
                                         ]
                                     ]
                                 ];
-                            
+
                                 $my_query = new WP_Query($args);
                                 if($my_query->have_posts()): ?>
                                     <div class="section-title m-b-xs-40">
                                         <h2 class="axil-title">Related</h2>
                                     </div>
-                                <?php 
+                                <?php
                                     while($my_query->have_posts()): $my_query->the_post();
                                     $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
                                 ?>
@@ -243,7 +245,7 @@ get_header(); ?>
                                     <!-- End of .content-block -->
                                 </div>
                                 <!-- End of .col-lg-3 -->
-                            <?php endwhile; 
+                            <?php endwhile;
                                 endif;
                             endif; ?>
 
@@ -259,7 +261,7 @@ get_header(); ?>
         </div>
         <!-- End of .post-single-wrapper -->
 
-    <?php 
+    <?php
         endwhile;
         wp_reset_postdata();
     ?>

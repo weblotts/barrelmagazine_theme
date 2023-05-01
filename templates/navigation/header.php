@@ -7,6 +7,10 @@
 	$category_menu_id = $menu_class->get_menu_id('barrel-category-menu'); 
 	$category_menus = wp_get_nav_menu_items($category_menu_id);
 
+	//	Top Left Menu Items
+	$special_menu_id = $menu_class->get_menu_id('barrel-special-menu');
+	$special_menus = wp_get_nav_menu_items($special_menu_id);
+
 ?>
 
 
@@ -114,15 +118,18 @@
 				<div class="col-md">
 					<ul class="header-top-nav list-inline justify-content-center justify-content-md-start">
 						<li class="current-date"><?php echo date('D M, Y ');  ?></li>
-						<?php if(!is_user_logged_in()){ ?> 
-							<li class="current-date"><a href="/login">Login</a></li>
-							<li class="current-date"><a href="/register">Register</a></li>
-						<?php } else { ?>
-							<li class="current-date"><a href="/account">My Account</a></li>
-							<li class="current-date"><a href="wp-login.php?action=logout">Logout</a></li>
-						<?php } ?>
+						<?php
+							if(!empty($special_menus) && is_array($special_menus)){?>
+								<?php foreach ($special_menus as $menu_item ){
+									$child_menu_items = $menu_class->get_child_menu_items($special_menus, $menu_item->ID); ?>
+
+									<li class="current-date"><a href="<?php echo esc_url( $menu_item->url); ?>"><?php echo esc_html($menu_item->title);?></a></li>
+
+								<?php } ?>
+							<?php }?>
 						
 					</ul>
+
 					<!-- End of .header-top-nav -->
 				</div>
 				<div class="col-md-auto">

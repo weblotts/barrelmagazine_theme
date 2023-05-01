@@ -28,7 +28,7 @@ get_header(); ?>
 	<?php get_template_part( 'templates/homepage/sticky-area' ); ?>
 
     <!-- News Area -->
-	<?php get_template_part( 'templates/homepage/news-section' ); ?>
+	<?php //get_template_part( 'templates/homepage/news-section' ); ?>
 
 
 	
