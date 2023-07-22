@@ -1,11 +1,10 @@
 <?php
 /**
- * @package barrel
+* Template Post Type: post, article
+*@package barrel
  */
 global $post;
 get_header(); ?>
-
-
 
     <div class="breadcrumb-wrapper">
         <div class="container">
@@ -16,7 +15,6 @@ get_header(); ?>
         <!-- End of .container -->
     </div>
     <!-- End of .breadcrumb-container -->
-
 
     <?php
     // Start the loop.
@@ -92,10 +90,7 @@ get_header(); ?>
                             </div>
                             <!-- End of .social-share -->
                             <div class="single-content">
-                                <?php the_content(
-                                    
-                                );?>
-
+                                <?php the_content();?>
                             </div>
                         </div>
                         <!-- End of .single-blog-wrapper -->
@@ -123,7 +118,7 @@ get_header(); ?>
                                 <!-- End of .media-body-title -->
 
                                 <div class="media-body-content">
-                                    <p><?php the_author_description();?></p>
+                                    <p><?php the_author_meta('description');?></p>
                                     <!-- <ul class="social-share social-share__with-bg">
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>

@@ -1,7 +1,7 @@
 <?php
 /*
-Template Name: No Featured Image
-Template Post Type: post
+* Template Name: No Featured Image
+* Template Post Type: post, article
 */
 global $post;
 get_header(); ?>
@@ -17,11 +17,7 @@ get_header(); ?>
 <!-- End of .breadcrumb-container -->
 
 
-<?php
-// Start the loop.
-while ( have_posts() ) : the_post();
-    $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );
-    ?>
+<?php while ( have_posts() ) : the_post();  $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' ); ?>
     <!-- Banner starts -->
     <section class="banner banner__single-post banner__standard">
         <div class="container">
@@ -116,6 +112,7 @@ while ( have_posts() ) : the_post();
                                     <div class="media-body-title">
                                         <h3><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' ) )  ?>"><?php the_author();?></a></h3>
                                     </div>
+                                    
                                     <!-- End of .media-body-title -->
 
                                     <div class="media-body-content">
@@ -134,14 +131,9 @@ while ( have_posts() ) : the_post();
                         </div>
                         <!-- End of .about-author -->
 
-
-
                         <div class="post-navigation-wrapper row  m-b-xs-60">
-
                         </div>
                         <!-- End of .post-navigation -->
-
-
 
                     </main>
                     <!-- End of main -->
@@ -257,10 +249,7 @@ while ( have_posts() ) : the_post();
     </div>
     <!-- End of .post-single-wrapper -->
 
-<?php
-endwhile;
-wp_reset_postdata();
-?>
+<?php endwhile; wp_reset_postdata();?>
 
     <!-- Footer -->
 <?php get_footer();?>

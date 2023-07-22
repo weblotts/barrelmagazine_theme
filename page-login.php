@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Login Page
+ * Template Name: Login Page Template
  * @package barrel
  *
  */
@@ -11,31 +11,14 @@ get_header(); ?>
     ================================================ -->
     <div class="main-content">
 
-        <!-- Breadcrumbs  -->
-        <div class="breadcrumb-wrapper">
-            <div class="container">
-                <nav aria-label="breadcrumb">
-                    <?php barrel_get_breadcrumb(); ?>
-                </nav>
-            </div>
-            <!-- End of .container -->
-        </div>
-        <!-- End of .breadcrumb-container -->
-
-
-
-
-
-
         <div class="axil-about-us section-gap-top p-b-xs-20">
             <div class="container">
 
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h3>Subscribe</h3>
-                        <?php while(have_posts()): the_post(); ?>
-                            <?php the_content();?>
-                        <?php endwhile; ?>
+                        <?php echo do_shortcode('[mepr-login-form]'); ?>
+                        <p>Sign up here</p>
                     </div>
                     <!-- End of .col-lg-8 -->
 

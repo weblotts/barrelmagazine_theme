@@ -2,13 +2,15 @@
     /**
      * Main Template file
      * @package barrel
-     * 
+     *
      */
 get_header(); ?>
 
-	
+
 <!-- Main contents
-================================================ -->
+    ================================================ 
+-->
+ 
 <div class="main-content">
 
     <!-- slider Area -->
@@ -16,7 +18,6 @@ get_header(); ?>
 
     <!-- slider Area -->
     <?php get_template_part( 'templates/homepage/slider-section-one' ); ?>
-	
 
     <!-- Projects Area -->
 	<?php get_template_part( 'templates/homepage/projects-section' ); ?>
@@ -28,16 +29,9 @@ get_header(); ?>
 	<?php get_template_part( 'templates/homepage/sticky-area' ); ?>
 
     <!-- News Area -->
-	<?php //get_template_part( 'templates/homepage/news-section' ); ?>
+	<?php //        get_template_part( 'templates/homepage/test-magazine' ); ?>
 
-
-	
 </div>
-		
-		
-		
-		
 
-		
 <!-- Footer -->
 <?php get_footer();?>

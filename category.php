@@ -55,9 +55,6 @@ get_header(); ?>
     </section>
     <!-- End of .banner -->
 
-    
-
-
     <div class="random-posts section-gap cat-tag-author-sect">
         <div class="container">
             <div class="row">
@@ -96,9 +93,6 @@ get_header(); ?>
                                     </div>
                                     <!-- End of .post-block -->
 
-
-
-
                             <?php
                                 endwhile;
                                 wp_reset_postdata(); ?>
@@ -111,8 +105,6 @@ get_header(); ?>
                             <?php endif; ?>
                     </main>
                     <!-- End of .axil-content -->
-
-
 
                 </div>
                 <!-- End of .col-lg-8 -->
@@ -134,14 +126,7 @@ get_header(); ?>
     </div>
     <!-- End of .random-posts -->
 
-
-	
 </div>
-		
-		
-		
-		
-
 		
 <!-- Footer -->
 <?php get_footer();?>

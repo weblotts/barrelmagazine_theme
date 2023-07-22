@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Basic Registration
+ * Template Name: Basic Registration Gold
  * @package barrel
  *
  */
@@ -21,11 +21,6 @@ get_header(); ?>
             <!-- End of .container -->
         </div>
         <!-- End of .breadcrumb-container -->
-
-
-
-
-
 
         <div class="axil-about-us section-gap-top p-b-xs-20">
             <div class="container">
@@ -56,13 +51,7 @@ get_header(); ?>
         </div>
         <!-- End of .random-posts -->
 
-
-
     </div>
-
-
-
-
 
     <!-- Footer -->
 <?php get_footer();?>

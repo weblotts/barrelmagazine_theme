@@ -55,9 +55,6 @@ get_header(); ?>
         </section>
         <!-- End of .banner -->
 
-
-
-
         <div class="random-posts section-gap cat-tag-author-sect magazine-category">
             <div class="container">
                 <div class="row">
@@ -82,7 +79,7 @@ get_header(); ?>
                                         <div class="col-lg-4 col-md-4 issue mb-5">
                                             <div class="content-block m-b-xs-30">
                                                 <a href="<?php the_permalink();?>">
-                                                    <img class="p--img" src="<?php echo $backgroundImg[0]; ?>" alt="abstruct image"
+                                                    <img class="p--img" src="<?php echo $backgroundImg[0]; ?>" alt="<?php the_title();?>"
                                                          class="img-fluid h-100">
                                                     <div class="grad-overlay"></div>
                                                 </a>
@@ -116,7 +113,6 @@ get_header(); ?>
                     </div>
                     <!-- End of .col-lg-8 -->
 
-
                 </div>
                 <!-- End of .row -->
             </div>
@@ -124,14 +120,7 @@ get_header(); ?>
         </div>
         <!-- End of .random-posts -->
 
-
-
     </div>
-
-
-
-
-
 
     <!-- Footer -->
 <?php get_footer();?>

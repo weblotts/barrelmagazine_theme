@@ -193,6 +193,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 
+.advanced-reader{
+    /* height: 100vh; */
+}
+.advanced-reader .featured-image img{
+    /* height: 100vh; */
+    object-fit: cover;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.magazine-title h2{
+    font-size: 2em;
+    line-height: 1em;
+}
+a.wp-block-button__link.wp-element-button {
+    border-radius: 0;
+}
 @media screen and (max-width: 820px) {
     .content-block{
         height: 300px;

@@ -40,9 +40,6 @@ get_header(); ?>
     </section>
     <!-- End of .banner -->
 
-
-
-
     <div class="axil-about-us section-gap-top p-b-xs-20">
         <div class="container">
                 <figure class="m-b-xs-40">
@@ -78,13 +75,11 @@ get_header(); ?>
         <!-- End of .container -->
     </div>
 
-
-
     <div class="axil-our-team section-gap section-gap-top__with-text bg-grey-light-three">
         <div class="container">
             <div class="axil-team-grid-wrapper">
                 <div class="section-title d-block text-center">
-                    <h2 class="axil-title m-b-xs-20">Meet Our Great Team</h2>
+                    <h2 class="axil-title m-b-xs-20">Meet Our Team</h2>
                     <p>At Barrel Magazine, we believe in team-work<br>the fore fighting team</p>
                 </div>
             </div>
@@ -167,17 +162,11 @@ get_header(); ?>
                     <!-- End of .team-block -->
                 </div>
                 <!-- End of .col-lg-4 -->
-
-
             </div>
         </div>
     </div>
 
 </div>
-
-
-
-
 
 <!-- Footer -->
 <?php get_footer();?>

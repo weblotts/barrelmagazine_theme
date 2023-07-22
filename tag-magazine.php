@@ -52,9 +52,6 @@ get_header(); ?>
         </section>
         <!-- End of .banner -->
 
-
-
-
         <div class="random-posts section-gap cat-tag-author-sect magazine-category">
             <div class="container">
                 <div class="row">
@@ -105,14 +102,7 @@ get_header(); ?>
         </div>
         <!-- End of .random-posts -->
 
-
-
     </div>
-
-
-
-
-
 
     <!-- Footer -->
 <?php get_footer();?>

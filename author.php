@@ -54,9 +54,6 @@
     </section>
     <!-- End of .banner -->
 
-    
-
-
     <div class="random-posts section-gap cat-tag-author-sect">
         <div class="container">
             <div class="row">
@@ -67,10 +64,6 @@
                         if ( have_posts() ) : while ( have_posts() ) : the_post();
                         $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
                     ?>
-
-
-
-
 
                     <div class="media post-block post-block__mid m-b-xs-30">
                         <a href="" class="align-self-center"><img class=" m-r-xs-30" src="<?php echo $backgroundImg[0]; ?>" alt=""></a>
@@ -97,13 +90,10 @@
                     </div>
                     <!-- End of .post-block -->
 
-
-
-
                     <?php endwhile; wp_reset_postdata(); ?>
-                            <div>
+                            <!-- <div>
                                 <p>Author hasn't written a story yet. Please check again with us next time</p>
-                            </div>
+                            </div> -->
                     <?php endif; ?>
                         
                         
@@ -125,15 +115,7 @@
         <!-- End of .container -->
     </div>
     <!-- End of .random-posts -->
-
-
-	
 </div>
-		
-		
-		
-		
-
 		
 <!-- Footer -->
 <?php get_footer();?>

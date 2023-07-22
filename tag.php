@@ -6,7 +6,6 @@
      */
     
 get_header(); ?>
-
 	
 <!-- Main contents
 ================================================ -->
@@ -22,7 +21,6 @@ get_header(); ?>
         <!-- End of .container -->
     </div>
     <!-- End of .breadcrumb-container -->
-
 
     <!-- Banner starts -->
     <section class="banner banner__default bg-grey-light-three">
@@ -54,16 +52,12 @@ get_header(); ?>
     </section>
     <!-- End of .banner -->
 
-    
-
-
     <div class="random-posts section-gap cat-tag-author-sect">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <main class="axil-content">
 
-                    
                     <?php 
                         if ( have_posts() ) : while ( have_posts() ) : the_post();
                         $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );

@@ -19,8 +19,6 @@
 
      protected function set_hooks(){
         add_action( 'after_setup_theme', [$this, 'setup_theme'] );
-        // add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-        add_action( 'init', [$this,'create_custom_post_type'] );
      }
 
     function setup_theme(){
@@ -57,15 +55,15 @@
                 if (is_single()) {
                     echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
                     the_title();
-                }      
-        } 
+                }
+        }
         elseif(the_tags()){
             // echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
             // the_tags( ' &bull; ');
             //     if (is_single()) {
             //         echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
             //         the_title();
-            //     } 
+            //     }
             echo 'Hello';
         }
         elseif (is_page()) {
@@ -85,7 +83,7 @@
     function wpdocs_custom_excerpt_length( $length ) {
         return 20;
     }
-    
+
     function count_cat_post($category) {
         if(is_string($category)) {
             $catID = get_cat_ID($category);
@@ -97,24 +95,7 @@
         }
             $cat = get_category($catID);
         return $cat->count;
-    } 
-
-    // magazine custom type
-    function create_custom_post_type(){
-        register_post_type('magazine', [
-            'labels' =>[ 
-                'name' => __('Magazines', 'barrel'),
-                'singular_name' => __('Magazine', 'barrel')
-            ],
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => ['slug', 'magazines'],
-            'show_in_rest' => true 
-        ]);
     }
 
 
-    
-    
-    
  }

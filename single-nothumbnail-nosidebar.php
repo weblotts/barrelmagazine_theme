@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: No Featured Image No sidebar
-Template Post Type: post
+Template Post Type: post, article
 */
 global $post;
 get_header(); ?>
