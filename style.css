@@ -63,7 +63,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     justify-content: center;
     overflow: hidden;
 }
-
+.main-content{
+    position: relative;
+    min-height: 100vh;
+}
 .gridder .big {
     grid-column: 1/8;
     height: 450px !important;
@@ -236,4 +239,30 @@ a.wp-block-button__link.wp-element-button {
         object-fit: cover;
     }
 
+}
+.footer-about-barrel{
+    line-height: 10px;
+    /* font-family: 'Libre Baskerville', serif; */
+}
+/* Mobile Phones */
+@media screen and (max-width: 393px) {
+    
+}
+
+footer{
+    /* position: absolute; */
+    bottom: 0;
+    /* width: 100%; */
+}
+.axil-title{
+    font-size: 20px;
+}
+.featured-post-title{
+    font-size: 15px;
+    line-height: 10px;
+}
+.featured-img{
+    /* height: 70px; */
+    width: 100%;
+    object-fit: cover;
 }

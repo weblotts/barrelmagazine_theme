@@ -1,8 +1,8 @@
 <!-- End of .top-stories -->
-<section class="section-gap section-gap-top__with-text trending-stories home--trending flagship-section1">
+<section class="section-gap trending-stories home--trending ">
     <div class="container">
-        <div class="section-title m-b-xs-40">
-            <h2 class="axil-title">Featured Stories</h2>
+        <div class="section-title">
+            <h2 class="axil-title">Projects</h2>
             <!-- <a href="#" class="btn-link">ALL Featured STORIES</a> -->
         </div>
         <div class="row ">
@@ -11,8 +11,8 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 4,
-                    'category_name' => 'featured',
+                    'posts_per_page' => 6,
+                    'category_name' => 'flagship-projects',
                     'post__not_in' => get_option( 'sticky_posts' )
                 );
                 $arr_posts = new WP_Query( $args );                              
@@ -23,13 +23,13 @@
                         $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
                     ?>
 
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="media post-block m-b-xs-30">
-                        <a href="<?= the_permalink( );?>" class="align-self-center"><img class=" m-r-xs-30"
+                        <a href="<?= the_permalink( );?>" class="align-self-center"><img class=" m-r-xs-30 featured-img"
                                 src="<?php echo $backgroundImg[0]; ?>" alt=""></a>
                         <div class="media-body ">
-                            <h3 class="axil-post-title hover-line hover-line"><a
-                                    href="<?= the_permalink( );?>"><?= the_title()?></a></h3>
+                            <h4 class="axil-post-title featured-post-title hover-line hover-line"><a
+                                    href="<?= the_permalink( );?>"><?= the_title()?></a></h4>
                             <div class="post-metas">
                                 <ul class="list-inline">
                                     <li><i class="fa fa-clock" aria-hidden="true"></i><?php echo barrel_reading_time();?> read</li>
