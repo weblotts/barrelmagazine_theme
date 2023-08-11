@@ -11,7 +11,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 4,
                     'category_name' => 'flagship-projects',
                     'post__not_in' => get_option( 'sticky_posts' )
                 );
@@ -23,7 +23,7 @@
                         $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(), '' );
                     ?>
 
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="media post-block m-b-xs-30">
                         <a href="<?= the_permalink( );?>" class="align-self-center"><img class=" m-r-xs-30 featured-img"
                                 src="<?php echo $backgroundImg[0]; ?>" alt=""></a>

@@ -4,7 +4,7 @@ Theme URI: https://barrelmagzine.com/
 Author: Davies Wabuluka
 Author URI: https://weblotts.com/
 Description: This is the first theme of barrelmagazine custom built
-Version: 1.0
+Version: 1.1
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 8.0
@@ -251,7 +251,7 @@ a.wp-block-button__link.wp-element-button {
 
 footer{
     /* position: absolute; */
-    bottom: 0;
+    /* bottom: 0; */
     /* width: 100%; */
 }
 .axil-title{

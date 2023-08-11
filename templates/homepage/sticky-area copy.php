@@ -57,7 +57,7 @@
 			<!-- End of .col-lg-6 -->
 			<div class="col-lg-6">
 
-			<a class="twitter-timeline" data-width="520" data-height="600" href="https://twitter.com/BarrelMagazine?ref_src=twsrc%5Etfw">Tweets by BarrelMagazine</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/BarrelMagazine?ref_src=twsrc%5Etfw">Tweets by BarrelMagazine</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			<!-- End of .col-lg-6 -->
 
