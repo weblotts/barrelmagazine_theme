@@ -1,8 +1,8 @@
 <!-- End of .top-stories -->
-<section class="section-gap section-gap-top__with-text trending-stories home--trending flagship-section1">
+<section class="section-gap trending-stories home--trending ">
     <div class="container">
-        <div class="section-title m-b-xs-40">
-            <h2 class="axil-title">Featured Stories</h2>
+        <div class="section-title">
+            <h2 class="axil-title">Projects</h2>
             <!-- <a href="#" class="btn-link">ALL Featured STORIES</a> -->
         </div>
         <div class="row ">
@@ -12,7 +12,7 @@
                     'post_type' => 'post',
                     'post_status' => 'publish',
                     'posts_per_page' => 4,
-                    'category_name' => 'featured',
+                    'category_name' => 'flagship-projects',
                     'post__not_in' => get_option( 'sticky_posts' )
                 );
                 $arr_posts = new WP_Query( $args );                              

@@ -1,7 +1,7 @@
-<section class="section-gap section-gap-top__with-text top-stories bg-grey-light-three mb-4">
+<section class="top-stories bg-grey-light-three mb-4">
     <div class="container">
-        <div class="section-title m-b-xs-40">
-            <h2 class="axil-title">News</h2>
+        <div class="section-title ">
+            <h3 class="axil-title">Featured</h3>
             <!-- <a href="#" class="btn-link">More News</a> -->
         </div>
 
@@ -11,7 +11,7 @@
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'news',
+                'category_name' => 'featured',
                 'posts_per_page' => 3,
                 'post__not_in' => get_option( 'sticky_posts' )  
             );

@@ -173,6 +173,8 @@ get_header(); ?>
                     </div>
                     <!-- End of .tag-widget -->
 
+                    <?php get_template_part( 'templates/sidebars/sidebar-upper-down' ); ?>
+
                 </aside>
                 <!-- End of .post-sidebar -->
             </div>

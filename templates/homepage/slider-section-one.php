@@ -23,11 +23,7 @@
                         <div class="grad-overlay"></div>
                         <div class="container">
                             <div class="row">
-<!--                                <div class="col-lg-2">-->
-<!--                                    <div class="post-date perfect-square bg-primary-color">-->
-                                        <?php //echo //get_the_date('M');?> <span><?php // echo get_the_date('d');?></span>
-<!--                                    </div>-->
-<!--                                </div>-->
+
 
                                 <div class="col-lg-8">
                                     <div class="post-title-wrapper">
