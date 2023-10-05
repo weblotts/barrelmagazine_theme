@@ -8,13 +8,13 @@
 								<div class="col-md-2">
 									<div class="brand-logo-container">
 										<a href="/">
-											<img src="<?php echo BARREL_DIR_URI . '/assets/images/Barrel-Coloured-logo.png'; ?>" alt="Bar.Mag" class="brand-logo">
+											<img src="<?php echo BARREL_DIR_URI . '/assets/images/update_1/Barrel_White_Logo.png'; ?>" alt="Bar.Mag" class="brand-logo">
 										</a>
 									</div>
 								</div>
 								<div class="col-md-10">
 									<div class="footer-widget">
-										<p class="text-white footer-about-barrel pl-3 small">Barrel Magazine is a corporate magazine covering the Petroleum Industry in Uganda/East Africa with a global perspective. Articles featured include O&G industry specific news, progress on various industry projects, Health and Safety, Industry technology and novel techniques, R&D, expert opinions, Career advice, interviews of industry professionals and many more</p>
+										<p class="text-white footer-about-barrel pl-5 small" style="padding-left: 20px;">Barrel Magazine is a corporate magazine covering the Petroleum Industry in Uganda/East Africa with a global perspective. Articles featured include O&G industry specific news, progress on various industry projects, Health and Safety, Industry technology and novel techniques, R&D, expert opinions, Career advice, interviews of industry professionals and many more</p>
 									</div>
 								</div>
 							</div>

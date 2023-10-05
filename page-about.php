@@ -1,6 +1,6 @@
 <?php
     /**
-     * Main Template file
+     * Template Name: About Page
      * @package barrel
      *
      */
@@ -83,12 +83,12 @@ get_header(); ?>
                     <p>At Barrel Magazine, we believe in team-work<br>the fore fighting team</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row about-img">
 
                 <div class="col-lg-4">
                     <div class="axil-team-block m-b-xs-30">
                         <a href="#" class="d-block img-container">
-                            <img src="<?php echo BARREL_DIR_URI .'/assets/images/banner.jpg'; ?>" alt="team member 1">
+                            <img src="<?php echo BARREL_DIR_URI . '/assets/images/update_1/katungi_ronnie.jpeg'; ?>" alt="team member 1">
                         </a>
                         <div class="axil-team-inner-content text-center">
                             <h3 class="axil-member-title hover-line"><a href="">Ronnie Bravo Katungi</a></h3>
@@ -112,9 +112,12 @@ get_header(); ?>
                 <!-- End of .col-lg-4 -->
 
                 <div class="col-lg-4">
-                    <div class="axil-team-block m-b-xs-30">
+                    <div class="axil-team-block m-b-xs-30 ">
                         <a href="#" class="d-block img-container">
-                            <img src="<?php echo BARREL_DIR_URI .'/assets/images/banner.jpg'; ?>" alt="team member 1">
+                        <div class="about-img">
+                        <img src="<?php echo BARREL_DIR_URI . '/assets/images/update_1/JosephaJabo.jpg'; ?>" alt="team member 1">
+                        </div>
+                            
                         </a>
                         <div class="axil-team-inner-content text-center">
                             <h3 class="axil-member-title hover-line"><a href="">Josepha Jabo</a></h3>
@@ -140,7 +143,7 @@ get_header(); ?>
                 <div class="col-lg-4">
                     <div class="axil-team-block m-b-xs-30">
                         <a href="#" class="d-block img-container">
-                            <img src="<?php echo BARREL_DIR_URI .'/assets/images/banner.jpg'; ?>" alt="team member 1">
+                            <img src="<?php echo BARREL_DIR_URI . '/assets/images/update_1/andrew.jpeg'; ?>" alt="team member 1">
                         </a>
                         <div class="axil-team-inner-content text-center">
                             <h3 class="axil-member-title hover-line"><a href="">Andrew Baingana</a></h3>

@@ -121,7 +121,7 @@
 			<div class="navbar-inner">
 				<div class="brand-logo-container">
 					<a href="/">
-						<img src="<?php echo BARREL_DIR_URI .'/assets/images/Barrel-Coloured-logo.png'; ?>" alt="Bar.Mag" class="brand-logo">
+						<img src="<?php echo BARREL_DIR_URI .'/assets/images/update_1/Barrel_Colored_Logo.png'; ?>" alt="Bar.Mag" class="brand-logo">
 					</a>
 				</div>
 				<!-- End of .brand-logo-container -->
